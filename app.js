@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/api/calendar', quotesRouter);
+app.use('/api/calendar', calendarRouter);
 
 app.get('/doc/calendar', function(req, res) {
     res.sendFile('ressources/web/calendar.html', {root: __dirname});
